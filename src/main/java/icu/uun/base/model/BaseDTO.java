@@ -1,7 +1,7 @@
 
-package com.qiusm.parent.base.model;
+package icu.uun.base.model;
 
-import com.qiusm.parent.base.exception.BaseBusinessException;
+import icu.uun.base.exception.BaseBusinessException;
 import lombok.Data;
 import org.springframework.util.DigestUtils;
 

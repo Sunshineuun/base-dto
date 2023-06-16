@@ -1,4 +1,4 @@
-package com.qiusm.parent.base.model;
+package icu.uun.base.model;
 
 /**
  * @author qiushengming

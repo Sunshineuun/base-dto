@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>parent</artifactId>
-        <groupId>com.qiusm</groupId>
-        <version>0.0.1</version>
+        <artifactId>uun-parent</artifactId>
+        <groupId>icu.uun</groupId>
+        <version>0.0.2</version>
     </parent>
 
     <artifactId>base-dto</artifactId>
-
     <description>定义基础的DTO对象</description>
 
     <properties>

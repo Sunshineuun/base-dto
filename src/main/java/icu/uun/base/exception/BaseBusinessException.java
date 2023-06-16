@@ -1,4 +1,4 @@
-package com.qiusm.parent.base.exception;
+package icu.uun.base.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
