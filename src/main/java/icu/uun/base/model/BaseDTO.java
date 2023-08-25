@@ -27,7 +27,8 @@ public class BaseDTO<T> implements Serializable {
         name = "msg",
         example = "提示信息代码对应的消息"
     )*/
-    private String msg;
+
+    private String errorMessage;
     /*@ApiModelProperty(
         value = "响应结果Map<String,Object>",
         name = "result"
@@ -52,17 +53,17 @@ public class BaseDTO<T> implements Serializable {
 
     public BaseDTO() {
         this.code = BaseDTOCode.SUCCESS.getCode();
-        this.msg = "操作成功";
+        this.errorMessage = "操作成功";
     }
 
     public void setCodeAndMsg(String code, String msg) {
         this.code = code;
-        this.msg = msg;
+        this.errorMessage = msg;
     }
 
     public void setCodeAndMsg(String code, String msg, String subcode) {
         this.code = code;
-        this.msg = msg;
+        this.errorMessage = msg;
         this.subcode = subcode;
     }
 
@@ -77,13 +78,13 @@ public class BaseDTO<T> implements Serializable {
 
     public BaseDTO<T> fail(String msg) {
         this.code = BaseDTOCode.FAILED.getCode();
-        this.msg = msg;
+        this.errorMessage = msg;
         return this;
     }
 
     public T assertSuccess() {
         if (!this.isSuccess()) {
-            throw new BaseBusinessException(this.getMsg(), this.getCode());
+            throw new BaseBusinessException(this.getErrorMessage(), this.getCode());
         } else {
             return this.getResultVo();
         }
