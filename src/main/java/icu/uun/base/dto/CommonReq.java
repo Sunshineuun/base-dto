@@ -9,6 +9,7 @@ public class CommonReq {
     /**
      * 用户ID
      */
+//    @NotNull
     private Long userId;
     /**
      * 坐标定位区域代码
@@ -17,10 +18,13 @@ public class CommonReq {
     /**
      * 品牌代码
      */
+//    @NotBlank
     private String brandCode;
     /**
      * 角色代码 没有就为空
      */
+//    @NotBlank
     private String roleCode;
-    private List<Integer> roleIds;
+//    @NotEmpty
+    private List<Long> roleIds;
 }

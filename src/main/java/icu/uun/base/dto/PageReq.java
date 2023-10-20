@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class PageReq extends CommonReq {
+
     private Integer size;
     private Integer page;
 
